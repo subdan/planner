@@ -6,7 +6,7 @@ Planner — Планировщик задач под iOS.
 <br><br>
 Приложение разработано в качестве дипломного проекта по авторскому курсу [«iOS-разработчик. Вводный курс»](https://openprofession.ru/course/CONTENTED/ios_start/) от [Redmadrobot](https://www.redmadrobot.ru).
 
-<br><br><br><br>
+<br><br><br>
 
 ## Функции
 * Создание, редактирование и удаление задач
