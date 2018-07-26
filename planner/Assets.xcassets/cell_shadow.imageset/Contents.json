@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "filename" : "cell_shadow.png",
+      "resizing" : {
+        "mode" : "9-part",
+        "center" : {
+          "mode" : "tile",
+          "width" : 25,
+          "height" : 44
+        },
+        "cap-insets" : {
+          "bottom" : 52,
+          "top" : 54,
+          "right" : 56,
+          "left" : 49
+        }
+      }
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottom_circles" translatesAutoresizingMaskIntoConstraints="NO" id="RHq-7g-yDk">
+                                <rect key="frame" x="0.0" y="543" width="375" height="164"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="164" id="ENa-Pj-2xe"/>
+                                    <constraint firstAttribute="height" constant="164" id="eLe-kX-yOs"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pLx-MU-dDF" userLabel="MainHeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qrv-hv-IVB">
+                                        <rect key="frame" x="126" y="60" width="37" height="37"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pill" translatesAutoresizingMaskIntoConstraints="NO" id="FBp-dC-E43">
+                                                <rect key="frame" x="0.0" y="0.0" width="37" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="BOr-5H-LjL"/>
+                                            <constraint firstAttribute="width" constant="37" id="U9Z-le-Va0"/>
+                                        </constraints>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_circles" translatesAutoresizingMaskIntoConstraints="NO" id="BuK-yc-qqR">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="130" id="dkA-bw-XW1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Задачи" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PDJ-iu-KW1">
+                                        <rect key="frame" x="32" y="62" width="83" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" red="0.1450980392" green="0.14901960780000001" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="BuK-yc-qqR" firstAttribute="top" secondItem="pLx-MU-dDF" secondAttribute="top" id="07G-T5-4X4"/>
+                                    <constraint firstItem="Qrv-hv-IVB" firstAttribute="top" secondItem="pLx-MU-dDF" secondAttribute="top" constant="60" id="AsI-pV-cw4"/>
+                                    <constraint firstAttribute="trailing" secondItem="BuK-yc-qqR" secondAttribute="trailing" id="Gdl-Is-w0x"/>
+                                    <constraint firstItem="Qrv-hv-IVB" firstAttribute="leading" secondItem="PDJ-iu-KW1" secondAttribute="trailing" constant="11" id="LOg-kX-fYz"/>
+                                    <constraint firstItem="PDJ-iu-KW1" firstAttribute="leading" secondItem="pLx-MU-dDF" secondAttribute="leading" constant="32" id="N2K-VL-RPa"/>
+                                    <constraint firstItem="BuK-yc-qqR" firstAttribute="leading" secondItem="pLx-MU-dDF" secondAttribute="leading" id="N4c-6C-7wv"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Qrv-hv-IVB" secondAttribute="trailing" constant="32" id="s6o-ha-5O3"/>
+                                    <constraint firstItem="PDJ-iu-KW1" firstAttribute="top" secondItem="pLx-MU-dDF" secondAttribute="top" constant="62" id="zSk-IH-095"/>
+                                    <constraint firstAttribute="height" constant="152" id="zkV-Sc-EeP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RHq-7g-yDk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Ma-AY-KWf"/>
+                            <constraint firstAttribute="bottom" secondItem="RHq-7g-yDk" secondAttribute="bottom" constant="-40" id="7bs-oz-I6R"/>
+                            <constraint firstItem="pLx-MU-dDF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ivd-pT-wCF"/>
+                            <constraint firstItem="pLx-MU-dDF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j6K-0f-9gH"/>
+                            <constraint firstItem="RHq-7g-yDk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oEP-pW-Yv9"/>
+                            <constraint firstItem="pLx-MU-dDF" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="yI0-qm-G40"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bottom_circles" width="128" height="164"/>
+        <image name="pill" width="37" height="37"/>
+        <image name="top_circles" width="239" height="130"/>
+    </resources>
+</document>
