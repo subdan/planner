@@ -17,7 +17,7 @@ Planner — Планировщик задач под iOS.
 * Добавление локальных оповещений о предстоящей задаче
 
 ## Технологии
-Alamofire, CoreData, UserNotifications
+Alamofire, CoreData, UserNotifications, AutoLayout
 Swift 4, iOS 11, Xcode 9
 
 ## Скриншоты
