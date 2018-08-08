@@ -45,12 +45,19 @@ class TaskViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // setup views
+        scrollView.delegate = self
+        descriptionTextView.contentInset = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 0)
+        descriptionTextView.delegate = self
+        descriptionTextView.isScrollEnabled = false
+        
+        showTaskData()
+    }
+    
+    func showTaskData() {
         backButton.isHidden = mode == .create
         cancelButton.isHidden = mode != .create
         deleteButton.isHidden = mode != .edit
-        
-        scrollView.delegate = self
-        
         saveButton.isEnabled = mode == .edit
         
         if mode == .edit, let task = taskToEdit {
@@ -75,11 +82,9 @@ class TaskViewController: UIViewController {
             // Workaround because UITextView doesn't have a placeholder
             descriptionTextView.textColor = UIColor.lightGray
         }
-        
-        descriptionTextView.contentInset = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 0)
-        descriptionTextView.delegate = self
-        descriptionTextView.isScrollEnabled = false
-        
+    }
+    
+    func addNotificationObservers() {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(adjustForKeyboard(_:)),
@@ -93,6 +98,10 @@ class TaskViewController: UIViewController {
             name: .UIKeyboardWillHide,
             object: nil
         )
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     @IBAction func deleteTap(_ sender: Any) {
@@ -117,10 +126,6 @@ class TaskViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
-    
     @objc private func adjustForKeyboard(_ notification: NSNotification) {
         
         guard notification.name != .UIKeyboardWillHide else {
@@ -129,14 +134,12 @@ class TaskViewController: UIViewController {
             return
         }
         
-        guard let userInfo = notification.userInfo else {
+        guard
+            let userInfo = notification.userInfo,
+            let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
             return
         }
-        
-        guard let keyboardFrame = userInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
-            return
-        }
-        
+
         let keyboardHeight = keyboardFrame.cgRectValue.height
         
         scrollView.contentInset.bottom = keyboardHeight

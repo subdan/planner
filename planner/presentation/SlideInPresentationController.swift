@@ -12,6 +12,8 @@ import UIKit
 class SlideInPresentationController: UIPresentationController {
     
     fileprivate var dimmingView: UIView!
+    fileprivate let dimmingViewColor = UIColor(red: 0.14, green: 0.14, blue: 0.37, alpha: 0.2)
+    fileprivate let newViewControllerHeight: CGFloat = 281
     
     override init(presentedViewController: UIViewController,
                   presenting presentingViewController: UIViewController?) {
@@ -60,8 +62,7 @@ class SlideInPresentationController: UIPresentationController {
     override func size(forChildContentContainer container: UIContentContainer,
                        withParentContainerSize parentSize: CGSize) -> CGSize {
         
-        // 281 - height of HalfScreenViewController
-        return CGSize(width: parentSize.width, height: 281)
+        return CGSize(width: parentSize.width, height: newViewControllerHeight)
     }
     
     override var frameOfPresentedViewInContainerView: CGRect {
@@ -81,7 +82,7 @@ private extension SlideInPresentationController {
     func setupDimmingView() {
         dimmingView = UIView()
         dimmingView.translatesAutoresizingMaskIntoConstraints = false
-        dimmingView.backgroundColor = UIColor(displayP3Red: 0.14, green: 0.14, blue: 0.37, alpha: 0.2)
+        dimmingView.backgroundColor = dimmingViewColor
         dimmingView.alpha = 0.0
         
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))

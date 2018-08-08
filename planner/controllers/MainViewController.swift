@@ -152,10 +152,7 @@ extension MainViewController: UIGestureRecognizerDelegate {
 extension MainViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if let frc = fetchController, frc.sections != nil {
-            return frc.sections!.count
-        }
-        return 0
+        return fetchController?.sections?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -179,9 +176,18 @@ extension MainViewController: UITableViewDataSource {
             fatalError("Attempt to configure cell without a managed object")
         }
         
+        cell?.delegate = self
+        
         cell?.task = task
         
         return cell!
     }
     
+}
+
+extension MainViewController: TaskCellCheckDelegate {
+    func checkToggle(cell: UITableViewCell) {
+        let indexPath: NSIndexPath = tableView.indexPath(for: cell)! as NSIndexPath
+        tableView.delegate?.tableView!(tableView, accessoryButtonTappedForRowWith: indexPath as IndexPath)
+    }
 }

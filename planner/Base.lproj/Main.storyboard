@@ -38,7 +38,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X79-9G-Kta">
                                                     <rect key="frame" x="32" y="10" width="311" height="147"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_bg" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-mv-PZm">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell_bg" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-mv-PZm" userLabel="background">
                                                             <rect key="frame" x="0.0" y="0.0" width="311" height="147"/>
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </imageView>
@@ -70,6 +70,9 @@
                                                             <rect key="frame" x="263" y="56.5" width="34" height="34"/>
                                                             <state key="normal" image="check_off"/>
                                                             <state key="selected" image="check_on"/>
+                                                            <connections>
+                                                                <action selector="checkTap:" destination="cWM-0p-je3" eventType="touchUpInside" id="MjI-b1-7gk"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,7 +107,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="bg" destination="0IW-mv-PZm" id="0eL-ad-Vpg"/>
+                                            <outlet property="background" destination="0IW-mv-PZm" id="0eL-ad-Vpg"/>
                                             <outlet property="cellView" destination="X79-9G-Kta" id="sY8-g6-17o"/>
                                             <outlet property="checkButton" destination="lZW-4g-kl5" id="kp4-04-Ge8"/>
                                             <outlet property="dateLabel" destination="i9L-gB-nrc" id="I4h-rw-dO8"/>

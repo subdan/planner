@@ -17,7 +17,7 @@ enum ServiceResult<Value> {
 class GeocodingService {
     
     private enum Constants {
-        static let apiKey = ВСТАВЬТЕ_СВОЙ_КЛЮЧ_СЮДА
+        static let apiKey = "AIzaSyDHVXjp6Y3BE-vV431UKoRjEuEQlT_TMoU"
         static let baseURL = "https://maps.googleapis.com/maps/api"
         static let error = NSError(domain: "GeocodingService", code: 0, userInfo: nil)
     }
@@ -41,11 +41,9 @@ class GeocodingService {
             "key": Constants.apiKey
         ]
         
-        let url = URL.init(string: Constants.baseURL + Methods.geocode + Formats.json)!
+        let url = URL(string: Constants.baseURL + Methods.geocode + Formats.json)!
         
-        if request != nil {
-            request?.cancel()
-        }
+        request?.cancel()
         
         request = Alamofire.request(
             url,

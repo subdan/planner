@@ -23,6 +23,7 @@
 		0F64BD4020E8D28A006DAB6C /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64BD3F20E8D28A006DAB6C /* TaskTableViewCell.swift */; };
 		0F64BD4220E8D49D006DAB6C /* HeaderFilterControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64BD4120E8D49D006DAB6C /* HeaderFilterControl.swift */; };
 		0F64BD4520E970FF006DAB6C /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64BD4420E970FF006DAB6C /* TaskViewController.swift */; };
+		0F7DFD62211B7111002AC884 /* TaskCellCheckDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7DFD61211B7111002AC884 /* TaskCellCheckDelegate.swift */; };
 		0FC3094420F28427008F434E /* NotificationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC3094320F28427008F434E /* NotificationPickerViewController.swift */; };
 		0FC695B320E802A100169D3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC695B220E802A100169D3B /* AppDelegate.swift */; };
 		0FC695B520E802A100169D3B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FC695B420E802A100169D3B /* MainViewController.swift */; };
@@ -53,6 +54,7 @@
 		0F64BD3F20E8D28A006DAB6C /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		0F64BD4120E8D49D006DAB6C /* HeaderFilterControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderFilterControl.swift; sourceTree = "<group>"; };
 		0F64BD4420E970FF006DAB6C /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		0F7DFD61211B7111002AC884 /* TaskCellCheckDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellCheckDelegate.swift; sourceTree = "<group>"; };
 		0FC3094320F28427008F434E /* NotificationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPickerViewController.swift; sourceTree = "<group>"; };
 		0FC695AF20E802A100169D3B /* planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FC695B220E802A100169D3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				0F28925120F2018A00AC728C /* DatePickerViewController.swift */,
 				0FC3094320F28427008F434E /* NotificationPickerViewController.swift */,
 				0FD9809520F28545008E8D15 /* HalfScreenViewController.swift */,
+				0F7DFD61211B7111002AC884 /* TaskCellCheckDelegate.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			files = (
 				0F64BD4020E8D28A006DAB6C /* TaskTableViewCell.swift in Sources */,
 				0FC695B520E802A100169D3B /* MainViewController.swift in Sources */,
+				0F7DFD62211B7111002AC884 /* TaskCellCheckDelegate.swift in Sources */,
 				0FD9809A20F290BB008E8D15 /* LocalNotificationHelper.swift in Sources */,
 				0F0C44B520EAC04F00FE2AEE /* GeocodingResult.swift in Sources */,
 				0F28924E20F1F99D00AC728C /* TaskFilterType.swift in Sources */,
@@ -486,6 +490,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.subdan.planner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -506,6 +511,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\"";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.subdan.planner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
